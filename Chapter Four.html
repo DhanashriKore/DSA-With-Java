@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Master Revision - Chapter 4 Data Types</title>
+    <style>
+        body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#222;line-height:1.7}
+        header{background:linear-gradient(90deg,#0f172a,#2563eb);color:#fff;padding:32px;text-align:center}
+        nav{position:sticky;top:0;background:#fff;padding:10px;border-bottom:1px solid #ddd}
+        nav a{margin:0 8px;color:#2563eb;text-decoration:none;font-weight:600}
+        .container{max-width:1100px;margin:auto;padding:22px}
+        .card{background:#fff;border-radius:12px;padding:22px;margin:20px 0;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+        h2{color:#1d4ed8}
+        pre{background:#1e293b;color:#e2e8f0;padding:14px;border-radius:8px;overflow:auto}
+        table{width:100%;border-collapse:collapse}
+        th,td{border:1px solid #ccc;padding:10px}th{background:#2563eb;color:#fff}
+        details{margin:8px 0}summary{cursor:pointer;font-weight:bold}
+        footer{text-align:center;padding:25px;color:#666}
+    </style>
+</head><body>
+<header><h1>☕ Java Master Revision</h1><h2>Chapter 4 – Data Types</h2><p>Beginner → Advanced → Interview Ready</p></header>
+<nav>
+    <a href="#intro">Intro</a><a href="#primitive">Primitive</a><a href="#non">Non-Primitive</a>
+    <a href="#best">Best Practices</a><a href="#interview">Interview</a><a href="#summary">Summary</a>
+</nav>
+<div class="container">
+    <div class="card" id="intro"><h2>🎯 Goal</h2><ul><li>Understand Data Types</li><li>Primitive vs Non-Primitive</li><li>Memory Representation</li><li>Defaults</li><li>Coding Practice</li></ul>
+        <h2>What is a Data Type?</h2><p>A data type tells Java what kind of value will be stored, how much memory to allocate and what operations are allowed.</p>
+        <pre>int age = 22;</pre>
+        <p><b>Real-life:</b> Like different containers (milk bottle, bucket, petrol tank) have different capacities, Java variables have different data types.</p>
+    </div>
+
+    <div class="card" id="primitive">
+        <h2>Primitive Data Types</h2>
+        <table>
+            <tr><th>Type</th><th>Size</th><th>Example</th></tr>
+            <tr><td>byte</td><td>1 byte</td><td>byte age=25;</td></tr>
+            <tr><td>short</td><td>2 bytes</td><td>short marks=300;</td></tr>
+            <tr><td>int</td><td>4 bytes</td><td>int salary=50000;</td></tr>
+            <tr><td>long</td><td>8 bytes</td><td>long pop=8000000000L;</td></tr>
+            <tr><td>float</td><td>4 bytes</td><td>float h=5.9f;</td></tr>
+            <tr><td>double</td><td>8 bytes</td><td>double pi=3.14;</td></tr>
+            <tr><td>char</td><td>2 bytes</td><td>char g='A';</td></tr>
+            <tr><td>boolean</td><td>JVM</td><td>boolean ok=true;</td></tr>
+        </table>
+        <details><summary>Common mistakes</summary>
+            <pre>char c = "A";   // Wrong
+float f = 5.5;  // Wrong
+long n = 9999999999; // Wrong
+
+char c='A';
+float f=5.5f;
+long n=9999999999L;
+</pre></details>
+    </div>
+
+    <div class="card" id="non">
+        <h2>Non-Primitive Data Types</h2>
+        <p>Examples include String, Array, Class and Interface.</p>
+        <pre>String name = "Dhanashri";
+int[] numbers = {1,2,3};</pre>
+        <table>
+            <tr><th>Primitive</th><th>Non-Primitive</th></tr>
+            <tr><td>Stores value</td><td>Stores reference</td></tr>
+            <tr><td>Fixed size</td><td>Variable size</td></tr>
+            <tr><td>Built into Java</td><td>Programmer/Library defined</td></tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>💻 Coding Exercise</h2>
+        <pre>public class DataTypesDemo{
+ public static void main(String[] args){
+  byte age=22;
+  short year=2026;
+  int salary=50000;
+  long population=8000000000L;
+  float height=5.7f;
+  double pi=3.1415926535;
+  char grade='A';
+  boolean isPlaced=true;
+
+  System.out.println(age);
+  System.out.println(year);
+  System.out.println(salary);
+  System.out.println(population);
+  System.out.println(height);
+  System.out.println(pi);
+  System.out.println(grade);
+  System.out.println(isPlaced);
+ }
+}</pre>
+    </div>
+
+    <div class="card" id="best">
+        <h2>⭐ Best Practices</h2>
+        <ul><li>Use int for integers.</li><li>Use double for decimals.</li><li>Use boolean for true/false.</li><li>Use meaningful names.</li></ul>
+    </div>
+
+    <div class="card" id="interview">
+        <h2>🎤 Interview Questions</h2>
+        <ol><li>What is a data type?</li><li>Primitive vs Non-Primitive?</li><li>Why int is default?</li><li>Why L with long?</li><li>Why f with float?</li><li>Difference between char and String?</li></ol>
+        <h2>🧠 Mini Quiz</h2>
+        <p>✔ int → Default integer type</p>
+        <p>✔ double → Default decimal type</p>
+        <p>✔ char uses single quotes</p>
+    </div>
+
+    <div class="card" id="summary">
+        <h2>📌 Summary</h2>
+        <pre>Primitive:
+byte short int long
+float double char boolean
+
+Non-Primitive:
+String Array Class Interface
+
+Remember:
+long -> L
+float -> f
+char -> 'A'
+String -> "A"</pre>
+        <h2>🎯 Homework</h2>
+        <ul><li>Predict output of int + double.</li><li>Will byte age=130 compile?</li><li>Find errors in char, float and long examples.</li></ul>
+    </div>
+</div>
+<footer>Java Master Revision • Chapter 4</footer>
+</body></html>

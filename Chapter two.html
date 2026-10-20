@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Master Revision - Chapter 2</title>
+    <style>
+        body{font-family:Arial,sans-serif;background:#f4f7fb;margin:0;color:#222;line-height:1.6}
+        header{background:linear-gradient(90deg,#0f172a,#2563eb);color:#fff;padding:30px;text-align:center}
+        nav{position:sticky;top:0;background:#fff;padding:10px;border-bottom:1px solid #ddd}
+        nav a{margin:0 8px;text-decoration:none;color:#2563eb;font-weight:bold}
+        .container{max-width:1100px;margin:auto;padding:20px}
+        .card{background:#fff;border-radius:10px;padding:20px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        pre{background:#1e293b;color:#e2e8f0;padding:14px;border-radius:8px;overflow:auto}
+        code{font-family:Consolas,monospace}
+        table{width:100%;border-collapse:collapse}
+        th,td{border:1px solid #ccc;padding:8px}
+        th{background:#2563eb;color:#fff}
+        details{margin:8px 0}
+        summary{font-weight:bold;cursor:pointer}
+        .quiz{background:#eef7ff;padding:12px;border-left:5px solid #2563eb}
+        footer{text-align:center;padding:20px;color:#666}
+    </style>
+    <script>
+        function copyCode(id){
+         const t=document.getElementById(id).innerText;
+         navigator.clipboard.writeText(t);
+         alert("Code copied!");
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>☕ Java Master Revision Course</h1>
+    <h2>Chapter 2 – Java Program Structure</h2>
+    <p>Complete Revision Notes</p>
+</header>
+<nav>
+    <a href="#structure">Structure</a>
+    <a href="#package">Package</a>
+    <a href="#import">Import</a>
+    <a href="#class">Class</a>
+    <a href="#main">Main()</a>
+    <a href="#comments">Comments</a>
+    <a href="#id">Identifiers</a>
+    <a href="#keywords">Keywords</a>
+    <a href="#summary">Summary</a>
+</nav>
+<div class="container">
+
+    <div class="card">
+        <h2>📚 Topics Covered</h2>
+        <ul>
+            <li>Structure of Java Program</li><li>Package</li><li>Import</li><li>Class</li>
+            <li>Main Method</li><li>public static void main(String[] args)</li>
+            <li>Statements & Blocks</li><li>Comments</li>
+            <li>Identifiers & Keywords</li><li>Naming Conventions</li>
+            <li>Execution Flow</li><li>Best Practices</li>
+            <li>Common Errors</li><li>Interview Questions</li>
+            <li>Practice Questions</li><li>Coding Exercises</li>
+            <li>Quiz & Homework</li>
+        </ul>
+    </div>
+
+    <div class="card" id="structure">
+        <h2>1. Structure of a Java Program</h2>
+        <p>Every Java program follows a fixed structure:</p>
+        <pre id="c1"><code>package packageName;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        System.out.println("Hello Java");
+    }
+}</code></pre>
+        <button onclick="copyCode('c1')">Copy Code</button>
+        <p><b>Flow:</b> Package → Import → Class → Main Method → Statements</p>
+    </div>
+
+    <div class="card" id="package">
+        <h2>2. Package</h2>
+        <p>Packages organize Java classes into folders.</p>
+        <pre><code>package com.company.employee;</code></pre>
+    </div>
+
+    <div class="card" id="import">
+        <h2>3. Import</h2>
+        <p>Imports allow access to predefined Java classes.</p>
+        <pre><code>import java.util.Scanner;</code></pre>
+    </div>
+
+    <div class="card" id="class">
+        <h2>4. Class Declaration</h2>
+        <pre><code>public class Student{
+}</code></pre>
+        <p>A class is a blueprint for creating objects.</p>
+    </div>
+
+    <div class="card" id="main">
+        <h2>5 & 6. Main Method</h2>
+        <pre><code>public static void main(String[] args){
+    System.out.println("Welcome");
+}</code></pre>
+        <ul>
+            <li><b>public</b> - accessible by JVM</li>
+            <li><b>static</b> - no object required</li>
+            <li><b>void</b> - returns nothing</li>
+            <li><b>main</b> - entry point</li>
+            <li><b>String[] args</b> - command-line arguments</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>7. Statements & 8. Blocks</h2>
+        <pre><code>int age=22;
+System.out.println(age);
+
+{
+   int x=10;
+   System.out.println(x);
+}</code></pre>
+    </div>
+
+    <div class="card" id="comments">
+        <h2>9. Comments</h2>
+        <pre><code>// Single line
+
+/* Multi-line */
+
+/**
+ * Documentation comment
+ */</code></pre>
+    </div>
+
+    <div class="card" id="id">
+        <h2>10. Identifiers</h2>
+        <table>
+            <tr><th>Valid</th><th>Invalid</th></tr>
+            <tr><td>studentName</td><td>1student</td></tr>
+            <tr><td>_age</td><td>student-name</td></tr>
+            <tr><td>$salary</td><td>student name</td></tr>
+        </table>
+    </div>
+
+    <div class="card" id="keywords">
+        <h2>11. Keywords</h2>
+        <p>Examples: class, public, static, void, if, while, return.</p>
+        <pre><code>// Invalid
+// int class = 10;</code></pre>
+    </div>
+
+    <div class="card">
+        <h2>12. Naming Conventions</h2>
+        <table>
+            <tr><th>Element</th><th>Convention</th><th>Example</th></tr>
+            <tr><td>Class</td><td>PascalCase</td><td>StudentDetails</td></tr>
+            <tr><td>Variable</td><td>camelCase</td><td>studentAge</td></tr>
+            <tr><td>Method</td><td>camelCase</td><td>calculateTotal()</td></tr>
+            <tr><td>Package</td><td>lowercase</td><td>com.company.app</td></tr>
+            <tr><td>Constant</td><td>UPPER_CASE</td><td>MAX_SIZE</td></tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>13. Program Execution Flow</h2>
+        <pre><code>.java
+ ↓
+javac
+ ↓
+.class
+ ↓
+JVM
+ ↓
+main()
+ ↓
+Statements
+ ↓
+Output</code></pre>
+    </div>
+
+    <div class="card">
+        <h2>⭐ Best Practices</h2>
+        <ul>
+            <li>Meaningful names</li>
+            <li>One public class per file</li>
+            <li>Proper indentation</li>
+            <li>Short methods</li>
+            <li>Use comments wisely</li>
+        </ul>
+        <h2>❌ Common Errors</h2>
+        <ul>
+            <li>Missing semicolon</li>
+            <li>Misspelling main()</li>
+            <li>Wrong file name</li>
+            <li>Missing String[] args</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎤 Interview Questions</h2>
+        <details><summary>Click to View</summary>
+            <ol><li>Structure of Java Program?</li><li>Purpose of main()?</li><li>Explain public static void main(String[] args).</li><li>Package?</li><li>Import?</li><li>Identifiers vs Keywords?</li></ol>
+        </details>
+    </div>
+
+    <div class="card">
+        <h2>💻 Coding Exercises</h2>
+        <pre><code>public class PersonalInfo{
+ public static void main(String[] args){
+  System.out.println("Name : Dhanashri");
+  System.out.println("City : Pune");
+  System.out.println("Goal : Java Full Stack Developer");
+ }
+}</code></pre>
+    </div>
+
+    <div class="card quiz">
+        <h2>🧠 Mini Quiz</h2>
+        <p>1. Entry point? <b>main()</b></p>
+        <p>2. Accessible from anywhere? <b>public</b></p>
+        <p>3. Valid Identifier? <b>studentName</b></p>
+        <p>4. Scanner import? <b>import java.util.Scanner;</b></p>
+    </div>
+
+    <div class="card" id="summary">
+        <h2>📌 One-Page Revision</h2>
+        <pre><code>Package
+ ↓
+Import
+ ↓
+Class
+ ↓
+main()
+ ↓
+Statements
+ ↓
+Output
+
+public → Accessible
+static → No Object
+void → No Return
+main → Entry
+String[] args → Arguments</code></pre>
+    </div>
+
+    <div class="card">
+        <h2>🎯 Homework</h2>
+        <ol>
+            <li>Print your name, age and dream company.</li>
+            <li>Explain main().</li>
+            <li>Why static?</li>
+            <li>Keyword vs Identifier.</li>
+            <li>Predict the output of the given Test class.</li>
+        </ol>
+    </div>
+
+</div>
+<footer>Java Master Revision Course - Chapter 2</footer>
+</body></html>

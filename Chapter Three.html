@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chapter 3 - Variables</title>
+    <style>
+        body{font-family:Segoe UI,Arial;background:#f5f7fb;margin:0;color:#222;line-height:1.7}
+        header{background:linear-gradient(90deg,#0f172a,#2563eb);color:#fff;padding:32px;text-align:center}
+        .container{max-width:1100px;margin:auto;padding:24px}
+        .card{background:#fff;padding:22px;border-radius:12px;margin:18px 0;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+        pre{background:#1e293b;color:#e2e8f0;padding:14px;border-radius:8px;overflow:auto}
+        table{width:100%;border-collapse:collapse}th,td{border:1px solid #ccc;padding:8px}th{background:#2563eb;color:#fff}
+        h2{color:#1d4ed8}
+    </style></head><body>
+<header><h1>☕ Java Master Revision</h1><h2>Chapter 3 – Variables</h2><p>Complete Beginner → Interview Ready</p></header>
+<div class="container">
+    <div class="card"><h2>Goal</h2><ul><li>What variables are</li><li>Why we need them</li><li>Memory representation</li><li>Types of variables</li><li>Scope</li><li>Interview questions</li></ul></div>
+    <div class="card"><h2>What is a Variable?</h2><p>A variable is a named memory location used to store data.</p><pre>int age = 22;</pre><pre>+-----------+
+| age | 22 |
++-----------+</pre></div>
+    <div class="card"><h2>Declaration vs Initialization</h2>
+        <table><tr><th>Declaration</th><th>Initialization</th></tr><tr><td>int age;</td><td>age = 22;</td></tr></table>
+        <pre>int age;
+age = 22;
+
+// or
+int age = 22;</pre></div>
+    <div class="card"><h2>Types of Variables</h2>
+        <h3>Local</h3><pre>public static void main(String[] args){
+ int age=22;
+}</pre>
+        <h3>Instance</h3><pre>class Student{
+ int age=22;
+}</pre>
+        <h3>Static</h3><pre>class Student{
+ static String college="ABC College";
+}</pre>
+        <table><tr><th>Feature</th><th>Local</th><th>Instance</th><th>Static</th></tr>
+            <tr><td>Declared in Method</td><td>Yes</td><td>No</td><td>No</td></tr>
+            <tr><td>Belongs to Object</td><td>No</td><td>Yes</td><td>No</td></tr>
+            <tr><td>Shared</td><td>No</td><td>No</td><td>Yes</td></tr></table></div>
+    <div class="card"><h2>Common Mistakes</h2><pre>int x;
+System.out.println(x); // Compilation Error</pre></div>
+    <div class="card"><h2>Interview Questions</h2><ol><li>What is a variable?</li><li>Declaration vs Initialization?</li><li>Local vs Instance vs Static?</li><li>Variable scope?</li></ol></div>
+    <div class="card"><h2>Coding Exercises</h2><pre>public class Main{
+ public static void main(String[] args){
+  int age=22;
+  String name="Dhanashri";
+  System.out.println(name);
+  System.out.println(age);
+ }
+}</pre></div>
+    <div class="card"><h2>Mini Quiz</h2><p>Q1: int age; ✔</p><p>Q2: Shared variable? Static ✔</p><p>Q3: Local variable before initialization? No ✔</p></div>
+    <div class="card"><h2>Homework</h2><ul><li>Explain variables, declaration, initialization and scope.</li><li>Predict outputs of Q1-Q3.</li></ul></div>
+</div>
+</body></html>
